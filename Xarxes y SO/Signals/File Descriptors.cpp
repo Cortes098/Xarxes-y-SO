@@ -1,11 +1,40 @@
 #include <iostream>
 #include <fcntl.h>
 
-void main() 
+void ejercicioclaseOUT() 
 {
 	int nuevo;
 
-	close(stdcout);
-	nuevo = ("example.dat", O_CREAT | O_WRONLY);
-	std::cout << "Hello World" << std::endl;
+	close(STDOUT_FILENO);
+	nuevo = ("example.txt", O_CREAT | O_WRONLY);
+
+	if (nuevo>=0) 
+	{
+		std::cout << "Hello World";
+	}
+	close(nuevo);
+}
+
+void ejercicioclaseIN()
+{
+	int nuevo;
+
+	close(STDIN_FILENO);
+	nuevo = open("example.txt", O_RDONLY);
+	
+
+	if (nuevo>=0)
+	{
+		std::string str;
+		std::getline(std::cin,str);
+		std::cout << "He leido: " << str << std::endl;
+	}
+	close(nuevo);
+}
+
+
+
+void main() 
+{
+
 }
