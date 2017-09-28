@@ -153,6 +153,7 @@
     <ClCompile Include="Ej7.cpp" />
     <ClCompile Include="Ej8.cpp" />
     <ClCompile Include="Ej9.cpp" />
+    <ClCompile Include="File Descriptors.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

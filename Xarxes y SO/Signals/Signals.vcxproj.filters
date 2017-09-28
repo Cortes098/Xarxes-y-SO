@@ -38,5 +38,8 @@
     <ClCompile Include="Ej9.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="File Descriptors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
