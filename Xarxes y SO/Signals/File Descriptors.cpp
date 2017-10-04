@@ -32,6 +32,33 @@ void ejercicioclaseIN()
 	close(nuevo);
 }
 
+void ejercicio11()
+{
+
+	pid_t pid;
+	int fd;
+
+	pid = fork();
+
+	if (pid == 0) 
+	{
+		fd = (open, "prueba.txt", O_WRONLY);
+		write(fd, "123456", 6);
+		close(fd);
+		exit(0);
+	}
+	else 
+	{
+		fd = (open, "prueba.txt", O_WRONLY);
+		write(fd, "abcd", 4);
+		close(fd);
+		int status;
+		wait(&status);
+
+	}
+
+}                                                                                         }
+
 
 
 void main() 
