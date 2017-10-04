@@ -54,12 +54,38 @@ void ejercicio11()
 		close(fd);
 		int status;
 		wait(&status);
-
 	}
-
 }                                                                                         }
 
+void pipes() 
+{
+	pid_t pid;
+	int fd[2];
+	size_t lenght = 512;
+	char buf[512];
+	int ok = pipe(fd);
 
+	pid = fork();
+
+	if (pid == 0) 
+	{
+		close(fd[0]);
+
+		write(fd[1], "abc", 3);
+		write(fd[1], "def", 3);
+		write(fd[1], "ghi", 3);
+	}
+	else 
+	{
+		sleep(1);//Si queremos que ponga mas en la pipe
+
+		int s = read(fd[0], buf, lenght);
+		int s//para quitar lo sobrante
+		buf[s] = '/0';
+		std::cout << buf;
+	}
+
+}
 
 void main() 
 {
