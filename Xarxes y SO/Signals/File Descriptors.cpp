@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fcntl.h>
+#include <wait>
+
 
 void ejercicioclaseOUT() 
 {
