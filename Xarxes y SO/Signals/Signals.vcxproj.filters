@@ -44,5 +44,8 @@
     <ClCompile Include="Who.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1Father2sons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
